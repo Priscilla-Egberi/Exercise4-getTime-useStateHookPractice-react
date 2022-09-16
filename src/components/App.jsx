@@ -6,6 +6,9 @@ function App() {
   const [time, newTime] = useState(new Date().toLocaleTimeString());
   var currentTime = time;
   console.log(time);
+  function Time(){
+       setInterval(() => newTime((currentTime = new Date().toLocaleTimeString())),1000)      
+  }
 
   //Show the latest time in the <h1> when the Get Time button
   //is pressed.
@@ -24,7 +27,6 @@ function App() {
       <h1>{currentTime}</h1>
       <button
         className="btn btn-warning"
-        onClick={setInterval(() => newTime((currentTime = new Date().toLocaleTimeString())),1000)}
       >
         Get Time
       </button>
