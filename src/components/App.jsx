@@ -24,7 +24,7 @@ function App() {
       <h1>{currentTime}</h1>
       <button
         className="btn btn-warning"
-        onClick={() => newTime((currentTime = new Date().toLocaleTimeString()))}
+        onClick={setInterval(() => newTime((currentTime = new Date().toLocaleTimeString())),1000)}
       >
         Get Time
       </button>
